@@ -52,9 +52,21 @@ void MergeSortRecursion(vector<int> &vec1,int left,int right)
 }
 
 //非递归方法
-void MergeSortRecursion()
+void MergeSortIteration()
 {
-	  
+	int left, right, mid;
+	int Slength = VecInt.size();
+	for (int i = 1; i < Slength; i *= 2)
+	{
+		left = 0;
+		while (left + i < Slength)
+		{
+			mid = left + i - 1;
+			right = mid + i < Slength ? mid + i : Slength - 1;
+			Merge(VecInt, left, mid, right);
+			left = right + i;
+		}
+	}
 }
 
 
@@ -71,9 +83,10 @@ int main()
 		VecInt.push_back(num);
 	}
 	//递归实现归并算法
-	MergeSortRecursion(VecInt,0,VecInt.size()-1);
+	//MergeSortRecursion(VecInt,0,VecInt.size()-1);
 
 	//非递归实现归并算法
+	MergeSortIteration();
 	//clock_t t2 = clock();
 	//clock_t t3 = t2 - t;
 	return 0;
