@@ -32,7 +32,7 @@ void Sort1()
 void Sort2()
 {
 	int slength = VecInt.size();
-	for (int i = 1; i < slength - 1; i++)
+	for (int i = 1; i < slength; i++)
 	{
 		int get = VecInt[i];
 		int left = 0;
@@ -56,10 +56,25 @@ void Sort2()
 
 }
 
-//改进后的插入排序--希尔排序
+//改进后的插入排序--希尔排序（shell sort）
 void Sort3()
 {
-
+	int Slength = VecInt.size();
+	int Index = Slength - 1;
+	for (int gap = Index / 2; gap > 0; gap /= 2)
+	{
+		for (int i = gap; i <Slength; i++)
+		{
+			int j = i;
+			while (j - gap >= 0 && VecInt[j] < VecInt[j - gap])
+			{
+				int temp = VecInt[j-gap];
+				VecInt[j - gap] = VecInt[j];
+				VecInt[j] = temp;
+				j -= gap;
+			}
+		}
+	}
 }
 
 int main()
@@ -75,7 +90,7 @@ int main()
 	
 	//Sort1();
 	Sort2();
-
+	//Sort3();
 	//VecInt.push_back(5);
 	//int i =VecInt.size();
 	//int j = VecInt[0];
