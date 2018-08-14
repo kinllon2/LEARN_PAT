@@ -39,6 +39,6 @@ public:
 	//求最短路径
 	void Dijkstra(int begin);
 	//打印最短路径
-	void print_path(int);
+	void print_path(int begin);
 
 };
