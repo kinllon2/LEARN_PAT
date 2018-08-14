@@ -10,10 +10,10 @@ Graph_DG::Graph_DG(int vexnum, int edge)
 	//为邻接矩阵开辟空间和赋初值
 	arc = new int*[this->vexnum];
 	dis = new Dis[this->vexnum];
-	for(int i=0;i<this->vexnum;k++)
+	for(int i=0;i<this->vexnum;i++)
 	{
 		arc[i] = new int[this->vexnum];
-		for(int k=0;i<this->vexnum;k++)
+		for(int k=0;k < this->vexnum;k++)
 		{
 			//邻接矩阵初始值为无穷大
 			arc[i][k] = INT_MAX;
