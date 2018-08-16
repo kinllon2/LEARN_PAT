@@ -20,14 +20,15 @@ int main()
 	for(int i=0;i<N;i++)
 	{
 		cin >> teams[i];
-		amount[i] = teams[i];
 	}
 
 	for(int i=0;i<N;i++)
 	{
+		dist[i] = MAX;
 		for(int j=0;j<N;j++)
 		{
 				way[i][j] = MAX;
+		
 		}
 	}
 
@@ -49,23 +50,18 @@ int main()
 void Dijistra(int start)
 {
 	
-	int u = 0;
 	
 	int v[502];
+	pathcount[start] = 1;
+	dist[start] = 0;
+	amount[start] = teams[start];
 
-	for(int i=0;i<N;i++)
-	{
-		dist[i] = way[start][i];
+	for (int i = 0; i < N; i++)
 		v[i] = 0;
-		pathcount[i] = 1;
-		amount[i] = teams[i]+1;
-	}
-	v[start] = 1;//判断这个点是否已经被加入
-
 
 	while(1)
 	{
-		int mindis = MAX;
+		int u,mindis = MAX;
 		for (int i = 0; i < N; i++) {
 			if (v[i] == 0&&dist[i] < mindis) {
 				mindis = dist[i];
@@ -80,9 +76,10 @@ void Dijistra(int start)
 				if (dist[i] > dist[u] + way[u][i]) {
 					dist[i] = dist[u] + way[u][i];
 					amount[i] = amount[u] + teams[i];
+					pathcount[i] = pathcount[u];
 				}
 				else if (dist[i] == dist[u] + way[u][i]) {
-					pathcount[i] ++;
+					pathcount[i] += pathcount[u];
 					if (amount[i] < amount[u] + teams[i])
 						amount[i] = amount[u] + teams[i];
 				}
