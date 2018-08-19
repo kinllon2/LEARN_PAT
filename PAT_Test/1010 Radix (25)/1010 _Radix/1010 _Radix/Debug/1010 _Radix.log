@@ -1,0 +1,10 @@
+﻿  main.cpp
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(79): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(81): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(101): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(103): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(141): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(143): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(163): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1010 radix (25)\1010 _radix\1010 _radix\main.cpp(165): warning C4244: “=”: 从“double”转换到“__int64”，可能丢失数据
+  1010 _Radix.vcxproj -> E:\2018.7.30-2018.8.31\PAT\LEARN_PAT\PAT_Test\1010 Radix (25)\1010 _Radix\Debug\1010 _Radix.exe
