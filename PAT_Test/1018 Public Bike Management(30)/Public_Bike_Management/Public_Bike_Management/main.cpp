@@ -27,8 +27,8 @@ vector<node> station(502);
 int main()
 {
 	cin >> Cmax >> N >> SP >> M;
-	
-	for(int i=1;i<=N;i++)
+
+	for (int i = 1; i <= N; i++)
 	{
 		cin >> station[i].weight;
 		if (station[i].weight > Cmax / 2)
@@ -36,25 +36,25 @@ int main()
 		else
 			station[i].needbetake = 0;
 	}
-	for(int i=0;i<=N;i++)
+	for (int i = 0; i <= N; i++)
 	{
 		for (int j = 0; j <= N; j++)
 			rect[i][j] = max;
 	}
-	for(int i=0;i<M;i++)
+	for (int i = 0; i<M; i++)
 	{
 		cin >> row >> clo;
 		cin >> rect[row][clo];
 		rect[clo][row] = rect[row][clo];
 	}
 
-	
+
 	Dijistra(0);
-	cout << takenemaber<<" ";
+	cout << takenemaber << " ";
 
 	cout << path[SP];
 
-	cout <<" "<< bringnumber;
+	cout << " " << bringnumber;
 
 	return 0;
 }
@@ -62,12 +62,12 @@ int main()
 
 void Dijistra(int start)
 {
-	
+
 	int v[502];
 	int totaltake[502];
 	int dist[502];
-	
-	for(int i=0;i<=N;i++)
+
+	for (int i = 0; i <= N; i++)
 	{
 		path[i] = "0";
 	}
@@ -84,19 +84,19 @@ void Dijistra(int start)
 	for (int i = 1; i <= N; i++)
 	{
 		dist[i] = rect[start][i];
-		if(dist[i]<max)
+		if (dist[i]<max)
 		{
 			totaltake[i] = totaltake[start] + station[i].needbetake;
-			path[i] = path[start] + "->"+to_string(i);
+			path[i] = path[start] + "->" + to_string(i);
 		}
-				
+
 	}
 	v[0] = 1;
-	while(1)
+	while (1)
 	{
 		int u, minusetime;
 		minusetime = max;
-		for(int i=1;i<=N;i++)
+		for (int i = 1; i <= N; i++)
 		{
 			if (v[i] == 0 && dist[i] < minusetime)
 			{
@@ -105,8 +105,8 @@ void Dijistra(int start)
 			}
 		}
 		if (minusetime == max || u == SP)break;
-		  v[u] = 1;
-		for (int i = 1; i<=N; i++)
+		v[u] = 1;
+		for (int i = 1; i <= N; i++)
 		{
 			if (v[i] == 0) {
 				if (dist[i] > dist[u] + rect[u][i]) {
@@ -115,13 +115,13 @@ void Dijistra(int start)
 					path[i] = path[u] + "->" + to_string(i);
 				}
 				else if (dist[i] == dist[u] + rect[u][i])
-				{	
+				{
 					if (totaltake[i] < totaltake[u] + station[i].needbetake)
 					{
 						path[i] = path[u] + "->" + to_string(i);
 						totaltake[i] = totaltake[u] + station[i].needbetake;
 					}
-						
+
 				}
 			}
 		}
