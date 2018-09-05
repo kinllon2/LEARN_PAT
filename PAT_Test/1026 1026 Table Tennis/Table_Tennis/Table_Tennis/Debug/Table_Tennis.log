@@ -1,0 +1,6 @@
+﻿  main.cpp
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1026 1026 table tennis\table_tennis\table_tennis\main.cpp(26): warning C4018: “<”: 有符号/无符号不匹配
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1026 1026 table tennis\table_tennis\table_tennis\main.cpp(66): warning C4018: “<”: 有符号/无符号不匹配
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1026 1026 table tennis\table_tennis\table_tennis\main.cpp(93): warning C4018: “<”: 有符号/无符号不匹配
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1026 1026 table tennis\table_tennis\table_tennis\main.cpp(139): warning C4018: “<”: 有符号/无符号不匹配
+  Table_Tennis.vcxproj -> E:\2018.7.30-2018.8.31\PAT\LEARN_PAT\PAT_Test\1026 1026 Table Tennis\Table_Tennis\Debug\Table_Tennis.exe

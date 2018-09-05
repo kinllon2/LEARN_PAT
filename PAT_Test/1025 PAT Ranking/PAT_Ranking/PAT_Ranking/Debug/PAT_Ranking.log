@@ -1,2 +1,2 @@
 ﻿  main.cpp
-  PAT_Ranking.vcxproj -> E:\2018.7.30-2018.8.31\PAT\LEARN_PAT\PAT_Test\1025 PAT Ranking\PAT_Ranking\Debug\PAT_Ranking.exe
+e:\2018.7.30-2018.8.31\pat\learn_pat\pat_test\1025 pat ranking\pat_ranking\pat_ranking\main.cpp : fatal error C1041: 无法打开程序数据库“E:\2018.7.30-2018.8.31\PAT\LEARN_PAT\PAT_Test\1025 PAT Ranking\PAT_Ranking\PAT_Ranking\Debug\vc141.idb”；如果要将多个 CL.EXE 写入同一个 .PDB 文件，请使用 /FS
